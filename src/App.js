@@ -5,20 +5,21 @@ import { ToastContainer } from "react-toastify";
 import "react-loader-spinner/dist/loader/css/react-spinner-loader.css";
 export default class App extends Component {
   state = {
-    imageId: "",
+    arrayOfImages: " ",
   };
-  handleFormSubmit = (imageId) => {
-    this.setState({ imageId });
+  handleFormSubmit = (arrayOfImages) => {
+    this.setState({ arrayOfImages });
 
-    console.log(imageId);
+    console.log(arrayOfImages);
   };
 
   render() {
+    const { arrayOfImages } = this.state;
     return (
       <div>
         <Searchbar onSubmit={this.handleFormSubmit} />
         <ToastContainer />
-        <ImageGalleryItem imageId={this.state.imageId} />
+        <ImageGalleryItem arrayOfImages={arrayOfImages} />
       </div>
     );
   }

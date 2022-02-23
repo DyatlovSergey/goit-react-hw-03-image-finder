@@ -5,23 +5,23 @@ import { toast } from "react-toastify";
 
 export default class Searchbar extends Component {
   state = {
-    imageId: "",
+    arrayOfImages: "",
   };
 
   handleNameChange = (event) => {
-    this.setState({ imageId: event.currentTarget.value.toLowerCase() });
+    this.setState({ arrayOfImages: event.currentTarget.value.toLowerCase() });
   };
 
   handleSubmit = (event) => {
     event.preventDefault();
 
-    if (this.state.imageId.trim() === "") {
+    if (this.state.arrayOfImages.trim() === "") {
       alert("enter name");
       return;
     }
 
-    this.props.onSubmit(this.state.imageId);
-    this.setState({ imageId: "" });
+    this.props.onSubmit(this.state.arrayOfImages);
+    this.setState({ arrayOfImages: "" });
   };
 
   render() {
@@ -38,12 +38,12 @@ export default class Searchbar extends Component {
           <input
             className={s.SearchForm__input}
             type="text"
-            name="imageId"
+            name="arrayOfImages"
             autoComplete="off"
             autoFocus
             placeholder="Search images and photos"
             onChange={this.handleNameChange}
-            value={this.state.imageId}
+            value={this.state.arrayOfImages}
           />
         </form>
       </header>
