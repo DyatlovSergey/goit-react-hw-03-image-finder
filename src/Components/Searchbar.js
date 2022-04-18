@@ -1,7 +1,7 @@
 import s from "./styles.module.css";
 import { Component } from "react";
 import { ImSearch } from "react-icons/im";
-import { toast } from "react-toastify";
+// import { toast } from "react-toastify";
 
 export default class Searchbar extends Component {
   state = {

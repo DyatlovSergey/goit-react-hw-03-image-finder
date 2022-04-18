@@ -21,6 +21,8 @@ export default class ImageGalleryItem extends Component {
     }
   }
   render() {
+
+    
     return (
       <div>
         <h1>GALLERY</h1>
